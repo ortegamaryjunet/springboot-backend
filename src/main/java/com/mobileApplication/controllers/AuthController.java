@@ -49,6 +49,11 @@ public class AuthController {
 		this.registrationService = registrationService;
 		this.jwUtil = jwUtil;
 	}
+
+	@GetMapping("/")
+public String home() {
+    return "ClinicRole"; // MUST match ClinicRole.html (no .html)
+}
 	
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody LoginRequest request) {
