@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Dental Clinic - Role Type</title>
+
+<link rel="stylesheet" th:href="@{/css/ClinicRole.css}">
+</head>
+
+<body>
+
+<div class="overlay">
+    <div class="modal">
+        <img th:src="@{/images/clinic-logo.png}" alt="Clinic Logo" class="clinic-logo">
+
+        <h2>SELECT A CLINIC ROLE TYPE</h2>
+
+        <div class="user-options">
+
+            <div class="card">
+                <a th:href="@{/adminLogin}">
+                    <img th:src="@{/images/admin.png}" class="icon-img">
+                    <p>ADMIN</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a th:href="@{/doctorLogin}">
+                    <img th:src="@{/images/doctor.png}" class="icon-img">
+                    <p>DENTIST</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a th:href="@{/receptLogin}">
+                    <img th:src="@{/images/receptionist.png}" class="icon-img">
+                    <p>RECEPTIONIST</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
