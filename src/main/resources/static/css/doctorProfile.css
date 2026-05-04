@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@font-face { 
+    font-family: 'Retroica';
+    src: url('/fonts/Retroica.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('/fonts/Inter Bold.ttf') format('truetype');
+}
