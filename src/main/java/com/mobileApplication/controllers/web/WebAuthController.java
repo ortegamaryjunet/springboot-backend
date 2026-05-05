@@ -279,7 +279,7 @@ public class WebAuthController {
     @GetMapping("/adminLogin")
     public String adminLogin(HttpSession session) {
         session.setAttribute("loginType", "ADMIN");
-        return "LoginAdmin";
+        return "LoginAdmin.jsp";
     }
 
     @GetMapping("/doctorLogin")
