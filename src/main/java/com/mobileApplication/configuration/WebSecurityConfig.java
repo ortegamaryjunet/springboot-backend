@@ -44,7 +44,7 @@ public class WebSecurityConfig {
                 "/doctorProfile"
             )
 
-            .cors(Customizer.withDefaults())
+            .cors(cors -> cors.configurationSource(webCorsConfigurationSource()))
 
             .csrf(csrf -> csrf.disable())
 
@@ -93,7 +93,7 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
+    public CorsConfigurationSource webCorsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOriginPatterns(List.of("*"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
