@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -49,11 +50,6 @@ public class AuthController {
 		this.registrationService = registrationService;
 		this.jwUtil = jwUtil;
 	}
-
-	@GetMapping("/")
-public String home() {
-    return "ClinicRole"; // MUST match ClinicRole.html (no .html)
-}
 	
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody LoginRequest request) {
