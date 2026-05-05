@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Admin Login</title>
+<link rel="stylesheet" th:href="@{/css/ClinicLogin.css}">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="login-card">
+
+        <a th:href="@{/role}" class="back-button">
+            <span class="back-circle">←</span>
+            <span>Back</span>
+        </a>
+
+        <div class="logo">
+            <img th:src="@{/images/clinic-logo.png}">
+        </div>
+
+        <div class="header-text">
+            <h1>Welcome Back, Admin!</h1>
+            <p>Login as admin to manage your dental system.</p>
+        </div>
+
+        <form th:action="@{/web/login}" method="post">
+
+            <div class="input-group">
+                <img th:src="@{/images/admin-icon.png}" class="icon">
+                <input type="email" name="email" placeholder="Email address">
+            </div>
+
+            <div class="input-group">
+                <img th:src="@{/images/password.png}" class="icon">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

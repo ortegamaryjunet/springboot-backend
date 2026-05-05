@@ -46,13 +46,28 @@ public class WebAuthController {
         return "ClinicRole"; // MUST match ClinicRole.html (no .html)
     }
 
+//     @PostMapping("/web/login")
+// public String login(
+//         @RequestParam String email,
+//         @RequestParam String password,
+//         HttpSession session
+// ) {
+//     String role = (String) session.getAttribute("loginType");
 
+//     if ("ADMIN".equals(role)) {
+//         return "redirect:/web/admin/dashboard";
+//     }
 
+//     if ("DENTIST".equals(role)) {
+//         return "redirect:/web/doctor/dashboard";
+//     }
 
+//     if ("RECEPTIONIST".equals(role)) {
+//         return "redirect:/web/recepDashboard";
+//     }
 
-
-
-    
+//     return "redirect:/role";
+// }
 
     @GetMapping("/web/forgot")
     public String forgotPage() {
@@ -289,7 +304,7 @@ public class WebAuthController {
     @GetMapping("/adminLogin")
     public String adminLogin(HttpSession session) {
         session.setAttribute("loginType", "ADMIN");
-        return "LoginAdmin.jsp";
+        return "LoginAdmin";
     }
 
     @GetMapping("/doctorLogin")

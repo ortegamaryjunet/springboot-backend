@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Admin Audit Logs</title>
+
+<link rel="stylesheet" th:href="@{/css/adminAudit.css}">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+</head>
+
+<body>
+
+<!-- KEEP YOUR SIDEBAR SAME -->
+
+<tbody>
+<tr th:each="log : ${logs}">
+    <td th:text="${#strings.replace(log.timestamp.toString(),'T',' ')}"></td>
+    <td th:text="${log.roleType}"></td>
+    <td th:text="${log.name}"></td>
+    <td th:text="${log.actionType}"></td>
+    <td th:text="${log.moduleSection}"></td>
+    <td th:text="${log.ipAddress}"></td>
+
+    <td>
+        <span th:class="'status ' + (${log.status}=='Success' ? 'status-success' : 'status-failed')">
+            <span th:text="${log.status}"></span>
+        </span>
+    </td>
+</tr>
+</tbody>
+
+<script th:src="@{/scripts/adminAudit.js}"></script>
+</body>
+</html>
