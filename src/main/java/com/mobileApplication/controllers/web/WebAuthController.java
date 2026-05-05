@@ -294,7 +294,7 @@ public class WebAuthController {
         return "LoginReceptionist";
     }
 
-    @GetMapping({"/", "/role"})
+    @GetMapping("/role")
     public String rolePage() {
         return "ClinicRole";
     }
