@@ -30,24 +30,24 @@
 
             <div class="input-group">
                 <img src="/images/user.png" class="icon" alt="User Icon">
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name"
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required
                        value="${sessionScope.oldFullname != null ? sessionScope.oldFullname : ''}">
             </div>
 
             <div class="input-group">
                 <img src="/images/admin-icon.png" class="icon" alt="Email Icon">
-                <input type="email" id="email" name="email" placeholder="Enter your email address"
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required
                        value="${sessionScope.oldEmail != null ? sessionScope.oldEmail : ''}">
             </div>
 
             <div class="input-group">
                 <img src="/images/password.png" class="icon" alt="Password Icon">
-                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
 
             <div class="input-group">
                 <img src="/images/password.png" class="icon" alt="Confirm Password Icon">
-                <input type="password" id="repassword" name="repassword" placeholder="Confirm password">
+                <input type="password" id="repassword" name="repassword" placeholder="Confirm password" required>
             </div>
 
             <button type="submit" class="register-btn">Register</button>

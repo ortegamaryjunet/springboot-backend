@@ -50,7 +50,7 @@ public class MobileSecurityConfig {
         return source;
 	}
 	
-	
+
 	//Authenticate Token
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
