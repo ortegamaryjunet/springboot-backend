@@ -39,10 +39,20 @@ public class WebAuthController {
         this.webOtpService = webOtpService;
     }
 
+//thymeleaf
+
     @GetMapping("/")
         public String home() {
         return "ClinicRole"; // MUST match ClinicRole.html (no .html)
     }
+
+
+
+
+
+
+
+    
 
     @GetMapping("/web/forgot")
     public String forgotPage() {
