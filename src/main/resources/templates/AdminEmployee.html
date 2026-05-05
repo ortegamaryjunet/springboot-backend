@@ -1,4 +1,4 @@
-<tr th:each="e : ${employees}">
+{% comment %} <tr th:each="e : ${employees}">
     <td th:text="${e.id}"></td>
     <td th:text="${e.displayRole}"></td>
     <td th:text="${e.lastName}"></td>
@@ -10,4 +10,4 @@
 
 <tr th:if="${#lists.isEmpty(employees)}">
     <td colspan="8">No employees found.</td>
-</tr>
+</tr> {% endcomment %}
