@@ -42,7 +42,11 @@ if (cancelBtn) {
 
 if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
-        window.location.href = "/web/logout";
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = "/web/logout";
+      document.body.appendChild(form);
+      form.submit();
     });
 }
 

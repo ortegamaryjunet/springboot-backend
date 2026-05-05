@@ -56,7 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (logoutBtn) {
         logoutBtn.addEventListener("click", function () {
-            window.location.href = "/";
+            const form = document.createElement("form");
+        form.method = "POST";
+        form.action = "/web/logout";
+        document.body.appendChild(form);
+        form.submit();
         });
     }
 });
