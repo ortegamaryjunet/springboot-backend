@@ -39,35 +39,10 @@ public class WebAuthController {
         this.webOtpService = webOtpService;
     }
 
-//thymeleaf
-
-    @GetMapping("/")
-        public String home() {
-        return "ClinicRole"; // MUST match ClinicRole.html (no .html)
-    }
-
-//     @PostMapping("/web/login")
-// public String login(
-//         @RequestParam String email,
-//         @RequestParam String password,
-//         HttpSession session
-// ) {
-//     String role = (String) session.getAttribute("loginType");
-
-//     if ("ADMIN".equals(role)) {
-//         return "redirect:/web/admin/dashboard";
-//     }
-
-//     if ("DENTIST".equals(role)) {
-//         return "redirect:/web/doctor/dashboard";
-//     }
-
-//     if ("RECEPTIONIST".equals(role)) {
-//         return "redirect:/web/recepDashboard";
-//     }
-
-//     return "redirect:/role";
-// }
+    // @GetMapping("/")
+    //     public String home() {
+    //     return "ClinicRole"; // MUST match ClinicRole.html (no .html)
+    // }
 
     @GetMapping("/web/forgot")
     public String forgotPage() {
